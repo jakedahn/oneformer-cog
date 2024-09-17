@@ -1,3 +1,4 @@
+# This file was pulled from https://huggingface.co/docs/transformers/main/en/model_doc/oneformer#transformers.OneFormerModel.forward.example
 import time
 import torch
 from PIL import Image

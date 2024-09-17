@@ -12,8 +12,15 @@ class Predictor(BasePredictor):
         Load the model into memory to make running multiple predictions efficient.
         """
         # Load processor and model
-        self.processor = OneFormerProcessor.from_pretrained("shi-labs/oneformer_ade20k_dinat_large", cached_dir=CACHE_DIR)
-        self.model = OneFormerForUniversalSegmentation.from_pretrained("shi-labs/oneformer_ade20k_dinat_large", cached_dir=CACHE_DIR)
+        self.processor = OneFormerProcessor.from_pretrained(
+            "shi-labs/oneformer_ade20k_dinat_large",
+            cached_dir=CACHE_DIR
+        )
+        self.model = OneFormerForUniversalSegmentation.from_pretrained(
+            "shi-labs/oneformer_ade20k_dinat_large",
+            cached_dir=CACHE_DIR
+        )
+        # we want this to run on a GPU
         self.device = torch.device('cuda')
         self.model.to(self.device)
 

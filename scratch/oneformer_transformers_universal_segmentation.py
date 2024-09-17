@@ -1,3 +1,5 @@
+# This file was pulled from https://huggingface.co/docs/transformers/main/en/model_doc/oneformer#transformers.OneFormerForUniversalSegmentation.forward.example
+
 from transformers import OneFormerProcessor, OneFormerForUniversalSegmentation
 from PIL import Image
 import requests
